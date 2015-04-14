@@ -52,7 +52,7 @@ then
 fi
 
 echo "$(tput setaf 7)OK, Now we're going to create some ssl keys for stunnel...$(tput sgr0)"
-cd ~/ && openssl genrsa 1024 > stunnel.key && openssl req -new -x509 -nodes -sha1 -days 365 -key ~/stunnel.key > ~/stunnel.cert && cat ~/stunnel.key ~/stunnel.cert > ~/stunnel.pem
+#cd ~/ && openssl genrsa 1024 > stunnel.key && openssl req -new -x509 -nodes -sha1 -days 365 -key ~/stunnel.key > ~/stunnel.cert && cat ~/stunnel.key ~/stunnel.cert > ~/stunnel.pem
 # must stay down here because we just changed directories bro
 StunnelDir=`pwd`
 echo "$(tput setaf 4)Keys created at $StunnelDir/stunnel.key $StunnelDir/stunnel.cert && $StunnelDir/stunnel.pem$(tput sgr0)"
